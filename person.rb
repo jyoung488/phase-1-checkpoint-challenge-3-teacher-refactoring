@@ -1,6 +1,10 @@
+require_relative 'learnable'
+
 class Person
   attr_reader :age, :phase
   attr_accessor :name
+
+  include Learner
 
   def initialize(options = {})
     @age = options.fetch(:age, 0)
