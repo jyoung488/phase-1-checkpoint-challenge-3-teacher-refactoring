@@ -3,11 +3,8 @@ require_relative 'person'
 class Student < Person
 
   def initialize(options = {})
+    super
     @phase = 1
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)

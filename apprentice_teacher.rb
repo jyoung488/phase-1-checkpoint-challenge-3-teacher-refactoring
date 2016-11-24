@@ -1,6 +1,9 @@
 require_relative 'teacher'
+require_relative 'rateable'
 
 class ApprenticeTeacher < Teacher
+
+  include Rateable
 
   def initialize(options={})
     super
@@ -18,10 +21,6 @@ class ApprenticeTeacher < Teacher
   def salary=(new_salary)
     puts "This better be good!"
     @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)
